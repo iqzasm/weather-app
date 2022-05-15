@@ -18,18 +18,16 @@ export const Container = styled("div")<{ padding?: string }>`
   width: 100%;
   height: 100%;
   margin-top: 0%;
-  background: #2442b8;
+  background: ${(props) => props.theme.background};
   justify-content: center;
   align-items: center;
 `;
 export const WeatherContainer = styled(Container)<{ padding?: string }>`
-  background: #2442b8;
   margin: 0%;
   height: 100%;
   flex-direction: column;
 `;
 export const WeatherContentContainer = styled(Container)<{ padding?: string }>`
-  background: #2442b8;
   margin: 0%;
   height: 100%;
 
@@ -54,6 +52,10 @@ export const LeftWeatherContainer = styled(WeatherContentContainer)<{
 }>`
   display: flex;
   width: 40%;
+  @media (max-width: 600px) {
+    width: 100%;
+    flex-direction: column;
+  }
   justify-content: flex-end;
 `;
 
@@ -63,6 +65,8 @@ export const HeaderContainer = styled(WeatherContentContainer)<{
   height: auto;
 
   justify-content: space-between;
+
+  padding: 5%;
 `;
 
 export const ImageContainer = styled.div`

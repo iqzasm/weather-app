@@ -77,12 +77,13 @@ function WeatherDetail() {
         <HeaderContainer>
           <Stack gap="0%">
             <h1>Weather info for {city}</h1>
-            <h2>
+            <h4>
               {cityDate.toLocaleDateString() +
                 ", " +
                 cityDate.toLocaleTimeString()}
-            </h2>
+            </h4>
           </Stack>
+
           <button onClick={() => refetch()}>Refresh</button>
         </HeaderContainer>
         <WeatherContentContainer>

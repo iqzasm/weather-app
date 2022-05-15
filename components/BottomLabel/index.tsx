@@ -1,4 +1,4 @@
-import { Label, LabelBig, LabelSmall } from "../utils";
+import { Label, LabelBig, LabelSmall } from "../Labels";
 
 import { BottomLabelledContainer } from "./style";
 import React from "react";

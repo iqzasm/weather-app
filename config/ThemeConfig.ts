@@ -27,7 +27,7 @@ export const lightTheme: ThemeProps = {
   body: "#FFF",
   text: "#363537",
   toggleBorder: "#FFF",
-  background: "#363537",
+  background: "#2442b8",
   fontWeights: {
     light: "300",
     regular: "400",
