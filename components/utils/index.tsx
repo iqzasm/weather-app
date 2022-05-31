@@ -6,7 +6,7 @@ export function useInput({
 }: {
   type?: string;
   placeholder?: string;
-}) {
+}): [string, JSX.Element] {
   const [value, setValue] = useState("");
   const input = (
     <input

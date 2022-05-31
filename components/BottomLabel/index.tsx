@@ -4,7 +4,7 @@ import { BottomLabelledContainer } from "./style";
 import React from "react";
 
 interface IBottomLabelProps {
-  label: string;
+  label?: string;
   value: string;
   size?: "big" | "small";
   alignself?: "start" | "center" | "end";

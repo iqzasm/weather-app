@@ -3,8 +3,10 @@ import "../styles/globals.css";
 import { GlobalStyles, darkTheme, lightTheme } from "../config/ThemeConfig";
 
 import type { AppProps } from "next/app";
+import { Provider as ReduxProvider } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import { createGlobalStyle } from "styled-components";
+import { store } from "../redux/store";
 import { useState } from "react";
 
 // Your themeing variables
@@ -31,7 +33,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
       {/* <button onClick={toggleTheme}>Switch Theme</button> */}
-      <Component {...pageProps} />
+      <ReduxProvider store={store}>
+        <Component {...pageProps} />
+      </ReduxProvider>
     </ThemeProvider>
   );
 }

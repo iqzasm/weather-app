@@ -1,6 +1,6 @@
 import Axios, { AxiosResponse } from "axios";
 
-import { IWeatherAPIResponse } from "./types";
+import { IWeatherAPIAxiosResponse } from "./types";
 import config from "../config/app.json";
 
 const { url } = config.openweatherapi;
@@ -9,7 +9,7 @@ const weatherIconUrl = config.openweatherapi.iconUrl;
 export const getWeather = (loc: string) => {
   console.log("get Weather :", loc);
 
-  return Axios.get<IWeatherAPIResponse>(`${url}&q=${loc}`);
+  return Axios.get<IWeatherAPIAxiosResponse>(`${url}&q=${loc}`);
 };
 
 export const getWeatherUrl = (loc: string) => `${url}&q=${loc}`;
